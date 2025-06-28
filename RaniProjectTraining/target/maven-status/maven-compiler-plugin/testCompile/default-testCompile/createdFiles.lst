@@ -1,0 +1,4 @@
+com/automation/steps/LoginSteps.class
+com/automation/runners/CucumberRunner.class
+com/automation/steps/RegistrationSteps.class
+com/automation/steps/CommonSteps.class
