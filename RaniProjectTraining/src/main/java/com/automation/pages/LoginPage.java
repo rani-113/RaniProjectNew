@@ -33,7 +33,7 @@ public class LoginPage {
             tab.click();
             logger.info("Clicked on Login tab");
         } catch (Exception e) {
-            logger.error("Failed to click Login tab: " + e.getMessage());
+            logger.error("Failed to click Login tab:: " + e.getMessage());
             throw new RuntimeException("Failed to click Login tab", e);
         }
     }
