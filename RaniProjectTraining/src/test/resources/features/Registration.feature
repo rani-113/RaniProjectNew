@@ -1,3 +1,4 @@
+@sanity @regression
 Feature: Registration Functionality
   As a new user
   I want to be able to register for a new account
