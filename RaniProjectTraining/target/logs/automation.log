@@ -1,54 +1,78 @@
-2025-06-28 11:32:54.770 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
-2025-06-28 11:32:54.779 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
-2025-06-28 11:32:56.655 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
-2025-06-28 11:32:56.661 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
-2025-06-28 11:32:56.663 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
-2025-06-28 11:32:58.083 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
-2025-06-28 11:32:58.411 [main] INFO  com.automation.base.BaseClass - Navigated to URL: file:///Users/surenpalani/Documents/RaniProjectTraining/src/main/resources/webapp/index.html
-2025-06-28 11:32:58.412 [main] INFO  com.automation.steps.CommonSteps - Navigated to test application page
-2025-06-28 11:32:58.641 [main] INFO  com.automation.pages.LoginPage - Entered username: testuser
-2025-06-28 11:32:58.745 [main] INFO  com.automation.pages.LoginPage - Entered password
-2025-06-28 11:32:58.790 [main] INFO  com.automation.pages.LoginPage - Clicked Login button
-2025-06-28 11:32:58.820 [main] INFO  com.automation.pages.LoginPage - Login message: Login successful!
-2025-06-28 11:32:58.822 [main] INFO  com.automation.steps.LoginSteps - Login message verification successful: Login successful!
-2025-06-28 11:32:58.945 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
-2025-06-28 11:32:58.945 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
-2025-06-28 11:32:58.961 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
-2025-06-28 11:32:58.964 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
-2025-06-28 11:32:59.749 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
-2025-06-28 11:32:59.758 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
-2025-06-28 11:32:59.761 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
-2025-06-28 11:33:01.258 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
-2025-06-28 11:33:01.420 [main] INFO  com.automation.base.BaseClass - Navigated to URL: file:///Users/surenpalani/Documents/RaniProjectTraining/src/main/resources/webapp/index.html
-2025-06-28 11:33:01.420 [main] INFO  com.automation.steps.CommonSteps - Navigated to test application page
-2025-06-28 11:33:01.637 [main] INFO  com.automation.pages.LoginPage - Entered username: invaliduser
-2025-06-28 11:33:01.724 [main] INFO  com.automation.pages.LoginPage - Entered password
-2025-06-28 11:33:01.784 [main] INFO  com.automation.pages.LoginPage - Clicked Login button
-2025-06-28 11:33:01.806 [main] INFO  com.automation.pages.LoginPage - Login message: Invalid credentials!
-2025-06-28 11:33:01.806 [main] INFO  com.automation.steps.LoginSteps - Login message verification successful: Invalid credentials!
-2025-06-28 11:33:01.906 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
-2025-06-28 11:33:01.907 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
-2025-06-28 11:33:01.921 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
-2025-06-28 11:33:01.923 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
-2025-06-28 11:33:02.635 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
-2025-06-28 11:33:02.640 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
-2025-06-28 11:33:02.642 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
-2025-06-28 11:33:03.846 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
-2025-06-28 11:33:04.006 [main] INFO  com.automation.base.BaseClass - Navigated to URL: file:///Users/surenpalani/Documents/RaniProjectTraining/src/main/resources/webapp/index.html
-2025-06-28 11:33:04.008 [main] INFO  com.automation.steps.CommonSteps - Navigated to test application page
-2025-06-28 11:33:15.268 [main] ERROR c.automation.pages.RegistrationPage - Failed to click Register tab: Expected condition failed: waiting for presence of element located by: By.xpath: //div[contains(@class, 'nav-tab') and normalize-space(text())='Register'] (tried for 10 second(s) with 500 milliseconds interval)
-2025-06-28 11:33:15.268 [main] ERROR c.automation.steps.RegistrationSteps - Failed to click register tab: Failed to click Register tab
-2025-06-28 11:33:15.418 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
-2025-06-28 11:33:15.419 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
-2025-06-28 11:33:15.485 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
-2025-06-28 11:33:15.486 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
-2025-06-28 11:33:16.481 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
-2025-06-28 11:33:16.486 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
-2025-06-28 11:33:16.487 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
-2025-06-28 11:33:17.867 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
-2025-06-28 11:33:18.404 [main] INFO  com.automation.base.BaseClass - Navigated to URL: file:///Users/surenpalani/Documents/RaniProjectTraining/src/main/resources/webapp/index.html
-2025-06-28 11:33:18.439 [main] INFO  com.automation.steps.CommonSteps - Navigated to test application page
-2025-06-28 11:33:29.779 [main] ERROR c.automation.pages.RegistrationPage - Failed to click Register tab: Expected condition failed: waiting for presence of element located by: By.xpath: //div[contains(@class, 'nav-tab') and normalize-space(text())='Register'] (tried for 10 second(s) with 500 milliseconds interval)
-2025-06-28 11:33:29.779 [main] ERROR c.automation.steps.RegistrationSteps - Failed to click register tab: Failed to click Register tab
-2025-06-28 11:33:29.870 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
-2025-06-28 11:33:29.871 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-29 08:17:40.959 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  D:\Ai Training\RaniProjectTraining\testng.xml
+
+2025-06-29 08:17:45.011 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.119 (resolved driver for Chrome 137)
+2025-06-29 08:17:45.086 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Dell\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
+2025-06-29 08:17:47.770 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-29 08:17:47.794 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.119 (resolved driver for Chrome 137)
+2025-06-29 08:17:47.827 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Dell\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
+2025-06-29 08:17:48.822 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-29 08:17:49.100 [main] INFO  com.automation.base.BaseClass - Navigated to URL: file://D:\Ai Training\RaniProjectTraining/src/main/resources/webapp/index.html
+2025-06-29 08:17:49.101 [main] INFO  com.automation.steps.CommonSteps - Navigated to test application page
+2025-06-29 08:17:59.276 [main] ERROR com.automation.pages.LoginPage - Failed to enter username: Expected condition failed: waiting for element to be clickable: By.id: loginUsername (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50872}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50872/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e684c31f487a5796320903dff36c0e21
+2025-06-29 08:17:59.277 [main] ERROR com.automation.steps.LoginSteps - Failed to enter login username: Failed to enter username
+2025-06-29 08:17:59.577 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-29 08:17:59.578 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-29 08:17:59.673 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.119 (resolved driver for Chrome 137)
+2025-06-29 08:17:59.759 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Dell\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
+2025-06-29 08:18:01.120 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-29 08:18:01.145 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.119 (resolved driver for Chrome 137)
+2025-06-29 08:18:01.198 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Dell\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
+2025-06-29 08:18:02.812 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-29 08:18:03.366 [main] INFO  com.automation.base.BaseClass - Navigated to URL: file://D:\Ai Training\RaniProjectTraining/src/main/resources/webapp/index.html
+2025-06-29 08:18:03.367 [main] INFO  com.automation.steps.CommonSteps - Navigated to test application page
+2025-06-29 08:18:13.649 [main] ERROR com.automation.pages.LoginPage - Failed to enter username: Expected condition failed: waiting for element to be clickable: By.id: loginUsername (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50910}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50910/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e84835fa3b94ef6b33f51125a829501b
+2025-06-29 08:18:13.649 [main] ERROR com.automation.steps.LoginSteps - Failed to enter login username: Failed to enter username
+2025-06-29 08:18:14.060 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-29 08:18:14.061 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-29 08:18:14.164 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.119 (resolved driver for Chrome 137)
+2025-06-29 08:18:14.281 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Dell\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
+2025-06-29 08:18:15.814 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-29 08:18:15.866 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.119 (resolved driver for Chrome 137)
+2025-06-29 08:18:15.946 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Dell\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
+2025-06-29 08:18:17.682 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-29 08:18:17.996 [main] INFO  com.automation.base.BaseClass - Navigated to URL: file://D:\Ai Training\RaniProjectTraining/src/main/resources/webapp/index.html
+2025-06-29 08:18:17.997 [main] INFO  com.automation.steps.CommonSteps - Navigated to test application page
+2025-06-29 08:18:19.224 [main] INFO  c.automation.pages.RegistrationPage - Clicked on Register tab
+2025-06-29 08:18:19.412 [main] INFO  c.automation.pages.RegistrationPage - Entered name: John Doe
+2025-06-29 08:18:19.591 [main] INFO  c.automation.pages.RegistrationPage - Entered email: john.doe@example.com
+2025-06-29 08:18:19.726 [main] INFO  c.automation.pages.RegistrationPage - Entered username: johndoe
+2025-06-29 08:18:19.873 [main] INFO  c.automation.pages.RegistrationPage - Entered password
+2025-06-29 08:18:19.985 [main] INFO  c.automation.pages.RegistrationPage - Clicked Register button
+2025-06-29 08:18:20.040 [main] INFO  c.automation.pages.RegistrationPage - Registration message: Registration successful!
+2025-06-29 08:18:20.042 [main] INFO  c.automation.steps.RegistrationSteps - Registration message verification successful: Registration successful!
+2025-06-29 08:18:20.317 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-29 08:18:20.318 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-29 08:18:20.360 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.119 (resolved driver for Chrome 137)
+2025-06-29 08:18:20.465 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Dell\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
+2025-06-29 08:18:21.730 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-29 08:18:21.757 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.119 (resolved driver for Chrome 137)
+2025-06-29 08:18:21.805 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Dell\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
+2025-06-29 08:18:22.957 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-29 08:18:23.208 [main] INFO  com.automation.base.BaseClass - Navigated to URL: file://D:\Ai Training\RaniProjectTraining/src/main/resources/webapp/index.html
+2025-06-29 08:18:23.208 [main] INFO  com.automation.steps.CommonSteps - Navigated to test application page
+2025-06-29 08:18:24.438 [main] INFO  c.automation.pages.RegistrationPage - Clicked on Register tab
+2025-06-29 08:18:24.599 [main] INFO  c.automation.pages.RegistrationPage - Entered name: 
+2025-06-29 08:18:24.740 [main] INFO  c.automation.pages.RegistrationPage - Entered email: 
+2025-06-29 08:18:24.871 [main] INFO  c.automation.pages.RegistrationPage - Entered username: 
+2025-06-29 08:18:25.038 [main] INFO  c.automation.pages.RegistrationPage - Entered password
+2025-06-29 08:18:25.252 [main] INFO  c.automation.pages.RegistrationPage - Clicked Register button
+2025-06-29 08:18:35.708 [main] ERROR c.automation.pages.RegistrationPage - Failed to get registration message: Expected condition failed: waiting for visibility of element located by By.id: registerMessage (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50994}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50994/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2bd47a29dcdfc81f688a0ac1425b210e
+2025-06-29 08:18:35.709 [main] ERROR c.automation.steps.RegistrationSteps - Failed to verify registration message: Failed to get registration message
+2025-06-29 08:18:36.170 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-29 08:18:36.171 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully

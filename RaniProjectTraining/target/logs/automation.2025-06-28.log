@@ -1,0 +1,54 @@
+2025-06-28 11:32:54.770 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
+2025-06-28 11:32:54.779 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
+2025-06-28 11:32:56.655 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-28 11:32:56.661 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
+2025-06-28 11:32:56.663 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
+2025-06-28 11:32:58.083 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-28 11:32:58.411 [main] INFO  com.automation.base.BaseClass - Navigated to URL: file:///Users/surenpalani/Documents/RaniProjectTraining/src/main/resources/webapp/index.html
+2025-06-28 11:32:58.412 [main] INFO  com.automation.steps.CommonSteps - Navigated to test application page
+2025-06-28 11:32:58.641 [main] INFO  com.automation.pages.LoginPage - Entered username: testuser
+2025-06-28 11:32:58.745 [main] INFO  com.automation.pages.LoginPage - Entered password
+2025-06-28 11:32:58.790 [main] INFO  com.automation.pages.LoginPage - Clicked Login button
+2025-06-28 11:32:58.820 [main] INFO  com.automation.pages.LoginPage - Login message: Login successful!
+2025-06-28 11:32:58.822 [main] INFO  com.automation.steps.LoginSteps - Login message verification successful: Login successful!
+2025-06-28 11:32:58.945 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-28 11:32:58.945 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-28 11:32:58.961 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
+2025-06-28 11:32:58.964 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
+2025-06-28 11:32:59.749 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-28 11:32:59.758 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
+2025-06-28 11:32:59.761 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
+2025-06-28 11:33:01.258 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-28 11:33:01.420 [main] INFO  com.automation.base.BaseClass - Navigated to URL: file:///Users/surenpalani/Documents/RaniProjectTraining/src/main/resources/webapp/index.html
+2025-06-28 11:33:01.420 [main] INFO  com.automation.steps.CommonSteps - Navigated to test application page
+2025-06-28 11:33:01.637 [main] INFO  com.automation.pages.LoginPage - Entered username: invaliduser
+2025-06-28 11:33:01.724 [main] INFO  com.automation.pages.LoginPage - Entered password
+2025-06-28 11:33:01.784 [main] INFO  com.automation.pages.LoginPage - Clicked Login button
+2025-06-28 11:33:01.806 [main] INFO  com.automation.pages.LoginPage - Login message: Invalid credentials!
+2025-06-28 11:33:01.806 [main] INFO  com.automation.steps.LoginSteps - Login message verification successful: Invalid credentials!
+2025-06-28 11:33:01.906 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-28 11:33:01.907 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-28 11:33:01.921 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
+2025-06-28 11:33:01.923 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
+2025-06-28 11:33:02.635 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-28 11:33:02.640 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
+2025-06-28 11:33:02.642 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
+2025-06-28 11:33:03.846 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-28 11:33:04.006 [main] INFO  com.automation.base.BaseClass - Navigated to URL: file:///Users/surenpalani/Documents/RaniProjectTraining/src/main/resources/webapp/index.html
+2025-06-28 11:33:04.008 [main] INFO  com.automation.steps.CommonSteps - Navigated to test application page
+2025-06-28 11:33:15.268 [main] ERROR c.automation.pages.RegistrationPage - Failed to click Register tab: Expected condition failed: waiting for presence of element located by: By.xpath: //div[contains(@class, 'nav-tab') and normalize-space(text())='Register'] (tried for 10 second(s) with 500 milliseconds interval)
+2025-06-28 11:33:15.268 [main] ERROR c.automation.steps.RegistrationSteps - Failed to click register tab: Failed to click Register tab
+2025-06-28 11:33:15.418 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-28 11:33:15.419 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-28 11:33:15.485 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
+2025-06-28 11:33:15.486 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
+2025-06-28 11:33:16.481 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-28 11:33:16.486 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.49 (resolved driver for Chrome 138)
+2025-06-28 11:33:16.487 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surenpalani/.cache/selenium/chromedriver/mac-arm64/138.0.7204.49/chromedriver
+2025-06-28 11:33:17.867 [main] INFO  com.automation.base.BaseClass - WebDriver initialized successfully
+2025-06-28 11:33:18.404 [main] INFO  com.automation.base.BaseClass - Navigated to URL: file:///Users/surenpalani/Documents/RaniProjectTraining/src/main/resources/webapp/index.html
+2025-06-28 11:33:18.439 [main] INFO  com.automation.steps.CommonSteps - Navigated to test application page
+2025-06-28 11:33:29.779 [main] ERROR c.automation.pages.RegistrationPage - Failed to click Register tab: Expected condition failed: waiting for presence of element located by: By.xpath: //div[contains(@class, 'nav-tab') and normalize-space(text())='Register'] (tried for 10 second(s) with 500 milliseconds interval)
+2025-06-28 11:33:29.779 [main] ERROR c.automation.steps.RegistrationSteps - Failed to click register tab: Failed to click Register tab
+2025-06-28 11:33:29.870 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully
+2025-06-28 11:33:29.871 [main] INFO  com.automation.base.BaseClass - WebDriver closed successfully

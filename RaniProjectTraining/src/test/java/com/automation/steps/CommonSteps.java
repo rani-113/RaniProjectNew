@@ -12,11 +12,11 @@ public class CommonSteps {
     @Given("the user is on the test application page")
     public void the_user_is_on_the_test_application_page() {
         try {
-            // Get the absolute path to the HTML file
-            String currentDir = System.getProperty("user.dir");
-            String htmlPath = "file://" + currentDir + "/src/main/resources/webapp/index.html";
+            // Get url
+
+            String url = "https://www.saucedemo.com/";
             
-            BaseClass.navigateToUrl(htmlPath);
+            BaseClass.navigateToUrl(url);
             logger.info("Navigated to test application page");
         } catch (Exception e) {
             logger.error("Failed to navigate to test application page: " + e.getMessage());
