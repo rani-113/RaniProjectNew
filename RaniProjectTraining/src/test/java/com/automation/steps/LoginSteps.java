@@ -30,36 +30,40 @@ public class LoginSteps {
         BaseClass.quitDriver();
     }
     
-   @When("the user clicks to the add to cart button")
-    public void theUserClicksToTheAddToCartButton() {
+  @When("the user enters login username {string}")
+    public void the_user_enters_login_username(String username) {
         try {
-            addToCartPage.clickAddToCartButton();
+            loginPage.enterUsername(username);
+        } catch (Exception e) {
+            logger.error("Failed to enter login username: " + e.getMessage());
+            throw new RuntimeException("Failed to enter login username", e);
+        }
+    }
+    
+    @When("the user enters login password {string}")
+    public void the_user_enters_login_password(String password) {
+        try {
+            loginPage.enterPassword(password);
+        } catch (Exception e) {
+            logger.error("Failed to enter login password: " + e.getMessage());
+            throw new RuntimeException("Failed to enter login password", e);
+        }
+    }
+    
+    @When("the user clicks the login button")
+    public void the_user_clicks_the_login_button() {
+        try {
+            Thread.sleep(2000);
+            loginPage.clickLoginButton();
         } catch (Exception e) {
             logger.error("Failed to click login button: " + e.getMessage());
             throw new RuntimeException("Failed to click login button", e);
         }
     }
 
-    @Then("the user should be navigated to the {string}")
-    public void theUserShouldBeNavigatedToThe(String expectedTitle) throws InterruptedException {
 
-        String actual = addToCartPage.getHomePageTitle();
-        Assert.assertEquals(actual,expectedTitle);
-//        boolean isPresent = false;
- //        if (actual.contains(expectedUrl)) {
-//isPresent=true
-//        }
-  //          Assert.assertTrue(isPresent, "Url is not containing the desired value");
-        }
-
-    @Then("user logged out from the page")
-    public void userLoggedoutFromThePage() {
-        try {
-            addToCartPage.clickMenuButton();
-            addToCartPage.clickLogoutButton();
-
-        }catch (Exception e){
-
-        }
+    @When("the user enters username {string} and password {string}")
+    public void theUserEntersUsernameAndPassword(String username, String password) {
+        loginPage.login(username,password);
     }
 } 
