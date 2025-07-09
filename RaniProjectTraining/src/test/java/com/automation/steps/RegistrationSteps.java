@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
-public class RegistrationSteps {
+public class AddToCartSteps {
     
     private static final Logger logger = LoggerFactory.getLogger(RegistrationSteps.class);
     private WebDriver driver;
@@ -29,76 +29,36 @@ public class RegistrationSteps {
         BaseClass.quitDriver();
     }
     
-    @When("the user clicks on the register tab")
-    public void the_user_clicks_on_the_register_tab() {
+   @When("the user clicks to the add to cart button")
+    public void theUserClicksToTheAddToCartButton() {
         try {
-            registrationPage.clickRegisterTab();
+            addToCartPage.clickAddToCartButton();
         } catch (Exception e) {
-            logger.error("Failed to click register tab: " + e.getMessage());
-            throw new RuntimeException("Failed to click register tab", e);
+            logger.error("Failed to click login button: " + e.getMessage());
+            throw new RuntimeException("Failed to click login button", e);
         }
     }
-    
-    @When("the user enters full name {string}")
-    public void the_user_enters_full_name(String name) {
-        try {
-            registrationPage.enterName(name);
-        } catch (Exception e) {
-            logger.error("Failed to enter full name: " + e.getMessage());
-            throw new RuntimeException("Failed to enter full name", e);
+
+    @Then("the user should be navigated to the {string}")
+    public void theUserShouldBeNavigatedToThe(String expectedTitle) throws InterruptedException {
+
+        String actual = addToCartPage.getHomePageTitle();
+        Assert.assertEquals(actual,expectedTitle);
+//        boolean isPresent = false;
+ //        if (actual.contains(expectedUrl)) {
+//isPresent=true
+//        }
+  //          Assert.assertTrue(isPresent, "Url is not containing the desired value");
         }
-    }
-    
-    @When("the user enters email {string}")
-    public void the_user_enters_email(String email) {
+
+    @Then("user logged out from the page")
+    public void userLoggedoutFromThePage() {
         try {
-            registrationPage.enterEmail(email);
-        } catch (Exception e) {
-            logger.error("Failed to enter email: " + e.getMessage());
-            throw new RuntimeException("Failed to enter email", e);
-        }
-    }
-    
-    @When("the user enters registration username {string}")
-    public void the_user_enters_registration_username(String username) {
-        try {
-            registrationPage.enterUsername(username);
-        } catch (Exception e) {
-            logger.error("Failed to enter registration username: " + e.getMessage());
-            throw new RuntimeException("Failed to enter registration username", e);
-        }
-    }
-    
-    @When("the user enters registration password {string}")
-    public void the_user_enters_registration_password(String password) {
-        try {
-            registrationPage.enterPassword(password);
-        } catch (Exception e) {
-            logger.error("Failed to enter registration password: " + e.getMessage());
-            throw new RuntimeException("Failed to enter registration password", e);
-        }
-    }
-    
-    @When("the user clicks the register button")
-    public void the_user_clicks_the_register_button() {
-        try {
-            registrationPage.clickRegisterButton();
-        } catch (Exception e) {
-            logger.error("Failed to click register button: " + e.getMessage());
-            throw new RuntimeException("Failed to click register button", e);
-        }
-    }
-    
-    @Then("the user should see registration message {string}")
-    public void the_user_should_see_registration_message(String expectedMessage) {
-        try {
-            String actualMessage = registrationPage.getRegisterMessage();
-            Assert.assertTrue(actualMessage.contains(expectedMessage), 
-                "Expected message '" + expectedMessage + "' but got '" + actualMessage + "'");
-            logger.info("Registration message verification successful: " + expectedMessage);
-        } catch (Exception e) {
-            logger.error("Failed to verify registration message: " + e.getMessage());
-            throw new RuntimeException("Failed to verify registration message", e);
+            addToCartPage.clickMenuButton();
+            addToCartPage.clickLogoutButton();
+
+        }catch (Exception e){
+
         }
     }
 } 
