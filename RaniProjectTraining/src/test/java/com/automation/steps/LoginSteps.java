@@ -30,46 +30,36 @@ public class LoginSteps {
         BaseClass.quitDriver();
     }
     
-    @When("the user enters login username {string}")
-    public void the_user_enters_login_username(String username) {
+   @When("the user clicks to the add to cart button")
+    public void theUserClicksToTheAddToCartButton() {
         try {
-            loginPage.enterUsername(username);
-        } catch (Exception e) {
-            logger.error("Failed to enter login username: " + e.getMessage());
-            throw new RuntimeException("Failed to enter login username", e);
-        }
-    }
-    
-    @When("the user enters login password {string}")
-    public void the_user_enters_login_password(String password) {
-        try {
-            loginPage.enterPassword(password);
-        } catch (Exception e) {
-            logger.error("Failed to enter login password: " + e.getMessage());
-            throw new RuntimeException("Failed to enter login password", e);
-        }
-    }
-    
-    @When("the user clicks the login button")
-    public void the_user_clicks_the_login_button() {
-        try {
-            loginPage.clickLoginButton();
+            addToCartPage.clickAddToCartButton();
         } catch (Exception e) {
             logger.error("Failed to click login button: " + e.getMessage());
             throw new RuntimeException("Failed to click login button", e);
         }
     }
 
-    @Then("the user should see login message {string}")
-    public void the_user_should_see_login_message(String expectedMessage) {
+    @Then("the user should be navigated to the {string}")
+    public void theUserShouldBeNavigatedToThe(String expectedTitle) throws InterruptedException {
+
+        String actual = addToCartPage.getHomePageTitle();
+        Assert.assertEquals(actual,expectedTitle);
+//        boolean isPresent = false;
+ //        if (actual.contains(expectedUrl)) {
+//isPresent=true
+//        }
+  //          Assert.assertTrue(isPresent, "Url is not containing the desired value");
+        }
+
+    @Then("user logged out from the page")
+    public void userLoggedoutFromThePage() {
         try {
-            String actualMessage = loginPage.getLoginMessage();
-            Assert.assertTrue(actualMessage.contains(expectedMessage),
-                "Expected message '" + expectedMessage + "' but got '" + actualMessage + "'");
-            logger.info("Login message verification successful: " + expectedMessage);
-        } catch (Exception e) {
-            logger.error("Failed to verify login message: " + e.getMessage());
-            throw new RuntimeException("Failed to verify login message", e);
+            addToCartPage.clickMenuButton();
+            addToCartPage.clickLogoutButton();
+
+        }catch (Exception e){
+
         }
     }
 } 
