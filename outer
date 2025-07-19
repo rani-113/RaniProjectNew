@@ -1,1 +1,206 @@
-<div class="MuiFormControl-root MuiFormControl-fullWidth css-tzsjye"><div class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-15pokbz"><div tabindex="0" role="combobox" aria-controls=":ra:" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="standard-basic" id="standard-basic" class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1cccqvr"><span style="font-size: 16px;">Innovative Partners</span></div><input aria-invalid="false" aria-hidden="true" tabindex="-1" class="MuiSelect-nativeInput css-1k3x8v3" value="Innovative Partners"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-1utq5rl" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon"><path d="M7 10l5 5 5-5z"></path></svg></div></div>
+package com.automation.pages;
+
+import com.automation.base.BaseClass;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class selectDropDown {
+
+    private static final Logger logger = LoggerFactory.getLogger(selectDropDown.class);
+    private WebDriver driver;
+    private WebDriverWait wait;
+
+    // Locators for Material-UI dropdown
+    private By dropdownContainer = By.cssSelector("div.MuiFormControl-root.MuiFormControl-fullWidth");
+    private By dropdownTrigger = By.cssSelector("div[role='combobox']");
+    private By dropdownInput = By.cssSelector("input.MuiSelect-nativeInput");
+    private By dropdownOptions = By.cssSelector("ul.MuiList-root li");
+    private By dropdownIcon = By.cssSelector("svg.MuiSelect-icon");
+
+    public selectDropDown(WebDriver driver) {
+        this.driver = driver;
+        this.wait = BaseClass.getWait();
+    }
+
+    /**
+     * Select a value from the Material-UI dropdown by visible text
+     * 
+     * @param value The text value to select
+     */
+    public void selectValueByText(String value) {
+        try {
+            // Click on the dropdown to open it
+            WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(dropdownTrigger));
+            dropdown.click();
+            logger.info("Clicked on dropdown to open options");
+
+            // Wait for dropdown options to be visible and select the desired value
+            WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("//li[contains(text(), '" + value + "')]")));
+            option.click();
+            logger.info("Selected dropdown value: " + value);
+
+        } catch (Exception e) {
+            logger.error("Failed to select dropdown value '" + value + "': " + e.getMessage());
+            throw new RuntimeException("Failed to select dropdown value", e);
+        }
+    }
+
+    /**
+     * Select a value from the Material-UI dropdown by index
+     * 
+     * @param index The index of the option to select (0-based)
+     */
+    public void selectValueByIndex(int index) {
+        try {
+            // Click on the dropdown to open it
+            WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(dropdownTrigger));
+            dropdown.click();
+            logger.info("Clicked on dropdown to open options");
+
+            // Wait for dropdown options to be visible and select by index
+            WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("//ul[contains(@class, 'MuiList-root')]/li[" + (index + 1) + "]")));
+            option.click();
+            logger.info("Selected dropdown value at index: " + index);
+
+        } catch (Exception e) {
+            logger.error("Failed to select dropdown value at index " + index + ": " + e.getMessage());
+            throw new RuntimeException("Failed to select dropdown value by index", e);
+        }
+    }
+
+    /**
+     * Get the currently selected value from the dropdown
+     * 
+     * @return The text of the currently selected option
+     */
+    public String getSelectedValue() {
+        try {
+            WebElement selectedElement = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.cssSelector("div.MuiSelect-select span")));
+            String selectedValue = selectedElement.getText();
+            logger.info("Current selected value: " + selectedValue);
+            return selectedValue;
+        } catch (Exception e) {
+            logger.error("Failed to get selected value: " + e.getMessage());
+            throw new RuntimeException("Failed to get selected value", e);
+        }
+    }
+
+    /**
+     * Check if the dropdown is expanded/open
+     * 
+     * @return true if dropdown is open, false otherwise
+     */
+    public boolean isDropdownOpen() {
+        try {
+            WebElement dropdown = driver.findElement(dropdownTrigger);
+            String ariaExpanded = dropdown.getAttribute("aria-expanded");
+            return "true".equals(ariaExpanded);
+        } catch (Exception e) {
+            logger.error("Failed to check if dropdown is open: " + e.getMessage());
+            return false;
+        }
+    }
+
+    /**
+     * Open the dropdown if it's not already open
+     */
+    public void openDropdown() {
+        if (!isDropdownOpen()) {
+            try {
+                WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(dropdownTrigger));
+                dropdown.click();
+                logger.info("Opened dropdown");
+            } catch (Exception e) {
+                logger.error("Failed to open dropdown: " + e.getMessage());
+                throw new RuntimeException("Failed to open dropdown", e);
+            }
+        }
+    }
+
+    /**
+     * Close the dropdown if it's open
+     */
+    public void closeDropdown() {
+        if (isDropdownOpen()) {
+            try {
+                // Click outside the dropdown or press Escape
+                driver.findElement(By.tagName("body")).click();
+                logger.info("Closed dropdown");
+            } catch (Exception e) {
+                logger.error("Failed to close dropdown: " + e.getMessage());
+            }
+        }
+    }
+
+    /**
+     * Wait for dropdown options to be loaded
+     */
+    public void waitForDropdownOptions() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(dropdownOptions));
+            logger.info("Dropdown options loaded successfully");
+        } catch (Exception e) {
+            logger.error("Failed to wait for dropdown options: " + e.getMessage());
+            throw new RuntimeException("Dropdown options not loaded", e);
+        }
+    }
+
+    /**
+     * Check if a specific option exists in the dropdown
+     * 
+     * @param optionText The text of the option to check
+     * @return true if option exists, false otherwise
+     */
+    public boolean isOptionPresent(String optionText) {
+        try {
+            openDropdown();
+            waitForDropdownOptions();
+
+            WebElement option = driver.findElement(
+                    By.xpath("//li[contains(text(), '" + optionText + "')]"));
+            boolean isPresent = option.isDisplayed();
+            logger.info("Option '" + optionText + "' present: " + isPresent);
+            return isPresent;
+        } catch (Exception e) {
+            logger.info("Option '" + optionText + "' not found");
+            return false;
+        } finally {
+            closeDropdown();
+        }
+    }
+
+    /**
+     * Get all available options from the dropdown
+     * 
+     * @return Array of option texts
+     */
+    public String[] getAllOptions() {
+        try {
+            openDropdown();
+            waitForDropdownOptions();
+
+            java.util.List<WebElement> options = driver.findElements(dropdownOptions);
+            String[] optionTexts = new String[options.size()];
+
+            for (int i = 0; i < options.size(); i++) {
+                optionTexts[i] = options.get(i).getText();
+            }
+
+            logger.info("Retrieved " + optionTexts.length + " dropdown options");
+            return optionTexts;
+        } catch (Exception e) {
+            logger.error("Failed to get dropdown options: " + e.getMessage());
+            throw new RuntimeException("Failed to get dropdown options", e);
+        } finally {
+            closeDropdown();
+        }
+    }
+}
