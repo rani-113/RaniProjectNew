@@ -13,6 +13,7 @@ import org.testng.annotations.DataProvider;
         "json:target/cucumber-reports/CucumberTestReport.json",
         "junit:target/cucumber-reports/CucumberTestReport.xml"
     },
+        tags = "@Testing",
     monochrome = true,
     dryRun = false,
     publish = false

@@ -1,6 +1,8 @@
 package com.automation.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -59,4 +61,18 @@ public class BaseClass {
             throw new RuntimeException("Navigation failed", e);
         }
     }
+
+    public static void acceptAlert() {
+        try {
+            Alert alert = driver.switchTo().alert();
+            alert.accept();
+            logger.info("Alert accepted successfully.");
+        } catch (NoAlertPresentException e) {
+            logger.warn("No alert present to accept: " + e.getMessage());
+        } catch (Exception e) {
+            logger.error("Failed to accept alert: " + e.getMessage());
+            throw new RuntimeException("Failed to accept alert", e);
+        }
+    }
+
 } 

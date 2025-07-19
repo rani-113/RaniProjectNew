@@ -16,30 +16,20 @@ public class LoginPage {
     private WebDriverWait wait;
 
     // Locators
-    private By usernameField = By.id("loginUsername");
-    private By passwordField = By.id("loginPassword");
-    private By loginButton = By.cssSelector("#loginForm button[type='submit']");
-    private By loginMessage = By.id("loginMessage");
-    private By loginTab = By.xpath("//div[contains(@class, 'nav-tab') and contains(text(), 'Login')]");
+    private By usernameField = By.id("user-name");
+    private By passwordField = By.id("password");
+    private By loginButton = By.id("login-button");
+    private By errorMessage=By.xpath("//h3[@data-test='error']");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         this.wait = BaseClass.getWait();
     }
 
-    public void clickLoginTab() {
-        try {
-            WebElement tab = wait.until(ExpectedConditions.elementToBeClickable(loginTab));
-            tab.click();
-            logger.info("Clicked on Login tab");
-        } catch (Exception e) {
-            logger.error("Failed to click Login tab: " + e.getMessage());
-            throw new RuntimeException("Failed to click Login tab", e);
-        }
-    }
 
     public void enterUsername(String username) {
         try {
+            Thread.sleep(2000);
             WebElement element = wait.until(ExpectedConditions.elementToBeClickable(usernameField));
             element.clear();
             element.sendKeys(username);
@@ -73,25 +63,35 @@ public class LoginPage {
         }
     }
 
-    public String getLoginMessage() {
-        try {
-            WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(loginMessage));
-            String text = message.getText();
-            logger.info("Login message: " + text);
-            return text;
+//    public String getLoginMessage() {
+//        try {
+//            WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated());
+//            String text = message.getText();
+//            logger.info("Login message: " + text);
+//            return text;
+//        } catch (Exception e) {
+//            logger.error("Failed to get login message: " + e.getMessage());
+//            throw new RuntimeException("Failed to get login message", e);
+//        }
+//    }
+    public String getErrorMessage(){
+        try{
+            WebElement error=wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
+            String errorText=error.getText();
+            logger.info("Login message: " + errorText);
+            return errorText;
         } catch (Exception e) {
             logger.error("Failed to get login message: " + e.getMessage());
             throw new RuntimeException("Failed to get login message", e);
         }
     }
 
-    public boolean isLoginSuccessful() {
-        String message = getLoginMessage();
-        return message.contains("Login successful");
-    }
+//    public boolean isLoginSuccessful() {
+//        String message = getLoginMessage();
+//        return message.contains("Login successful");
+//    }
 
     public void login(String username, String password) {
-        clickLoginTab();
         enterUsername(username);
         enterPassword(password);
         clickLoginButton();

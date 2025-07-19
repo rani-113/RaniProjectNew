@@ -4,6 +4,8 @@ import com.automation.base.BaseClass;
 import com.automation.pages.LoginPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
@@ -29,31 +31,16 @@ public class LoginSteps {
     public void tearDown() {
         BaseClass.quitDriver();
     }
-    
-  @When("the user enters login username {string}")
-    public void the_user_enters_login_username(String username) {
-        try {
-            loginPage.enterUsername(username);
-        } catch (Exception e) {
-            logger.error("Failed to enter login username: " + e.getMessage());
-            throw new RuntimeException("Failed to enter login username", e);
-        }
+
+    @When("the user enters username {string} and password {string}")
+    public void theUserEntersUsernameAndPassword(String username, String password) {
+        loginPage.login(username,password);
     }
-    
-    @When("the user enters login password {string}")
-    public void the_user_enters_login_password(String password) {
+
+
+    @And("clicks the login button")
+    public void clicksTheLoginButton() {
         try {
-            loginPage.enterPassword(password);
-        } catch (Exception e) {
-            logger.error("Failed to enter login password: " + e.getMessage());
-            throw new RuntimeException("Failed to enter login password", e);
-        }
-    }
-    
-    @When("the user clicks the login button")
-    public void the_user_clicks_the_login_button() {
-        try {
-            Thread.sleep(2000);
             loginPage.clickLoginButton();
         } catch (Exception e) {
             logger.error("Failed to click login button: " + e.getMessage());
@@ -61,9 +48,27 @@ public class LoginSteps {
         }
     }
 
+    @Then("the user should be navigated to the inventory page")
+    public void theUserShouldBeNavigatedToTheInventoryPage() {
+try{
+    String expectedUrl = "https://www.saucedemo.com/inventory.html";
+    String actualUrl = driver.getCurrentUrl();
+    Assert.assertEquals("User is not navigated to inventory page", expectedUrl, actualUrl);
+} catch (Exception e) {
+    logger.error("Failed to verify navigation to inventory page: " + e.getMessage());
+    throw new RuntimeException("Failed to verify navigation to inventory page", e);
+}
 
-    @When("the user enters username {string} and password {string}")
-    public void theUserEntersUsernameAndPassword(String username, String password) {
-        loginPage.login(username,password);
     }
-} 
+
+    @Then("an error message should be displayed saying {string}")
+    public void anErrorMessageShouldBeDisplayedSaying(String expectedErrorMessage) {
+        try{
+           String actualErrorMessage= loginPage.getErrorMessage();
+            Assert.assertEquals("Error message does not match", expectedErrorMessage, actualErrorMessage);
+        }catch (Exception e) {
+            logger.error("Failed to verify error message: " + e.getMessage());
+            throw new RuntimeException("Failed to verify error message", e);
+        }
+    }
+}

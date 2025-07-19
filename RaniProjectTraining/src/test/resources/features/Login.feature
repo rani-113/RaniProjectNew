@@ -5,7 +5,7 @@ Feature: SauceDemo Login
   So that I can ensure authentication works properly
 
   Background:
-    Given the user is on the test application page
+    Given user is navigated to demo "https://www.saucedemo.com/"
 
   @Positive
   Scenario: Login with valid credentials

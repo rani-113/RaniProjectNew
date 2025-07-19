@@ -1,22 +1,20 @@
-@regression
-Feature: Login Functionality
-  As a user
-  I want to be able to login to the application
-  So that I can access my account
+Feature: SauceDemo Login
+
+  As a user of the SauceDemo application
+  I want to test login functionality with valid and invalid credentials
+  So that I can ensure authentication works properly
 
   Background:
-    Given the user is on the test application page
+    Given user is navigated to demo "https://www.saucedemo.com/"
 
-  @positive @login
-  Scenario: Successful login with valid credentials
-    When the user enters login username "testuser"
-    And the user enters login password "password123"
-    And the user clicks the login button
-    Then the user should see login message "Login successful!"
+  @Positive
+  Scenario: Login with valid credentials
+    When the user enters username "standard_user" and password "secret_sauce"
+    And clicks the login button
+    Then the user should be navigated to the inventory page
 
-  @negative @login
-  Scenario: Failed login with invalid credentials
-    When the user enters login username "invaliduser"
-    And the user enters login password "wrongpassword"
-    And the user clicks the login button
-    Then the user should see login message "Invalid credentials!"
+  @Negative
+  Scenario: Login with locked out user
+    When the user enters username "locked_out_user" and password "secret_sauce"
+    And clicks the login button
+    Then an error message should be displayed saying "Epic sadface: Sorry, this user has been locked out."

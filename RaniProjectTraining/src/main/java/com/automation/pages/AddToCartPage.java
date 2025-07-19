@@ -9,13 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class RegistrationPage {
+public class AddToCartPage {
 
-    private static final Logger logger = LoggerFactory.getLogger(RegistrationPage.class);
+    private static final Logger logger = LoggerFactory.getLogger(AddToCartPage.class);
     private WebDriver driver;
-    private WebDriverWait wait;
+   private WebDriverWait wait;
 //Locators
-   private By homePageTitle = By.xpath("//div[text()='Swag Labs']");
     private By addToCartButton = By.xpath("//button[@name='add-to-cart-sauce-labs-backpack']");
     private By menuButton= By.id("react-burger-menu-btn");
     private By logoutButton=By.id("logout_sidebar_link");
@@ -24,25 +23,12 @@ public class RegistrationPage {
         this.driver = driver;
         this.wait = BaseClass.getWait();
     }
-    public String getHomePageTitle() throws InterruptedException {
 
-   // WebElement homePageTitle = wait.until(ExpectedConditions.visibilityOfElementLocated(title));
-        String title;
-        try {
-            wait.until(ExpectedConditions.titleIs("Swag Labs"));
-            title = driver.getTitle();
-            logger.info("");
-        } catch (Exception e) {
-            logger.error("Failed to click Login button: " + e.getMessage());
-            throw new RuntimeException("Failed to click Login button", e);
-        }
-
-        return title;
-    }
 public void clickAddToCartButton(){
     try {
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
         button.click();
+
         logger.info("Clicked Login button");
     } catch (Exception e) {
         logger.error("Failed to click Login button: " + e.getMessage());
